@@ -1,0 +1,29 @@
+{
+    "flow": [
+        {
+            "table_id": "0",
+            "id": "102",
+            "priority": "1002",
+            "match": {
+                "in-port": "openflow:1:2"
+            },
+            "instructions": {
+                "instruction": [
+                    {
+                        "order": 0,
+                        "apply-actions": {
+                            "action": [
+                                {
+                                    "order": 0,
+                                    "output-action": {
+                                        "output-node-connector": "1"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
