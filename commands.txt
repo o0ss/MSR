@@ -1,0 +1,10 @@
+sudo mn --controller=remote,ip=[IP addres for ODL],port=6653 --topo tree,2 --switch ovsk,protocols=OpenFlow13
+
+
+curl -u admin:admin -X PUT -d "@[File with JSON instructions]" -H "Content-Type: application/json" http://[IP address for ODL]:8181/rests/data/opendaylight-inventory:nodes/node=openflow:2/flow-node-inventory:table=0/flow=201
+
+curl -u admin:admin -X PUT -d "@[File with JSON instructions]" -H "Content-Type: application/json" http://[IP address for ODL]:8181/rests/data/opendaylight-inventory:nodes/node=openflow:1/flow-node-inventory:table=0/flow=102
+
+curl -u admin:admin -X GET http://[IP address for ODL]:8181/rests/data/opendaylight-inventory:nodes/node=openflow:1/flow-node-inventory:table=0
+
+curl -u admin:admin -X DELETE http://[IP address for ODL]:8181/rests/data/opendaylight-inventory:nodes/node=openflow:1/flow-node-inventory:table=0/flow=101
